@@ -1,120 +1,133 @@
-/* Fonts */
-
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url("fonts/SourceSansPro-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url("fonts/SourceSansPro-Bold.ttf");
-    font-weight: 700;
-}
-
-/* General */
+/* Reset */
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("fonts/source-sans-pro/SourceSansPro-Regular.otf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("fonts/source-sans-pro/SourceSansPro-Bold.otf");
+    font-weight: 700;
 }
 
 body {
-    margin: 0;
     font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
-/* Header and banner background */
+/* Header */
 
-body > header,
-main > section:first-child {
-    color: white;
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(7, 22, 41, 0),
-            rgba(7, 22, 41, 0.9)
-        ),
-        url("images/background.png");
-    background-size: cover;
-    background-position: center;
-}
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 10;
 
-body > header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 70px;
-    padding: 30px max(8%, calc((100% - 1100px) / 2));
-    background-position: center top;
+
+    width: 1098px;
+    height: 70px;
+    padding-top: 28px;
+
+    background: transparent;
+    transform: translateX(-50%);
 }
 
-body > header > a img {
-    width: 168px;
-    height: auto;
+header > a {
     display: block;
 }
 
-body > header nav {
+header > a img {
+    display: block;
+    width: 167px;
+    height: auto;
+}
+
+header nav {
     display: flex;
     align-items: center;
     gap: 52px;
 }
 
-body > header nav a {
-    color: white;
+header nav a {
+    color: #ffffff;
     font-size: 12px;
     font-weight: 700;
     text-decoration: none;
 }
 
-body > header nav a:hover {
+header nav a:hover {
     color: #c271ff;
 }
 
-/* Banner */
+/* Hero and banner */
 
 main > section:first-child {
-    min-height: 1020px;
-    margin-top: -130px;
-    padding-top: 215px;
+    min-height: 1093px;
+    padding-top: 210px;
+
+    color: #ffffff;
     text-align: center;
-    background-position: center top;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(41, 48, 61, 0.15) 0%,
+            rgba(7, 22, 41, 0.65) 55%,
+            #071629 100%
+        ),
+        url("images/background.png") center top / cover no-repeat;
 }
 
-/* Main banner title */
+/* Main title block */
+
+main > section:first-child > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 main > section:first-child > div:first-child h1 {
-    margin: 0;
+    color: #ffffff;
     font-size: 120px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.25;
 }
 
-main > section:first-child > div:first-child > p {
-    margin: 10px 0 38px;
+main > section:first-child > div:first-child p {
+    margin-top: -8px;
+
+    color: #ffffff;
     font-size: 16px;
     font-weight: 700;
-    word-spacing: 45px;
+    word-spacing: 52px;
 }
 
-/* Register button */
-
 main > section:first-child button {
-    min-width: 162px;
-    min-height: 44px;
-    padding: 12px 20px;
+    width: 162px;
+    height: 44px;
+    margin-top: 38px;
+
     border: 0;
     border-radius: 22px;
-    color: white;
+
+    color: #ffffff;
     background-color: #c271ff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+
     font-family: inherit;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-}
-
-main > section:first-child button:hover {
-    opacity: 0.9;
 }
 
 /* Learn from the pros */
@@ -124,45 +137,54 @@ main > section:first-child > div:nth-child(2) {
 }
 
 main > section:first-child > div:nth-child(2) > h2 {
-    margin: 0 0 85px;
+    margin-bottom: 87px;
+
+    color: #ffffff;
     font-size: 32px;
     font-weight: 300;
 }
 
-main > section:first-child > div:nth-child(2) > h2::first-line {
-    color: white;
+main > section:first-child > div:nth-child(2) > h2 span {
+    color: #c271ff;
+    font-weight: 700;
 }
 
-/* Four professional profiles */
+/* Profiles */
 
 main > section:first-child > div:nth-child(2) > div {
     display: flex;
     justify-content: space-between;
-    width: min(100% - 40px, 1000px);
+
+    width: 1009px;
     margin: 0 auto;
 }
 
 main > section:first-child > div:nth-child(2) > div > div {
-    width: 180px;
+    width: 150px;
     text-align: center;
 }
 
 main > section:first-child > div:nth-child(2) img {
+    display: block;
+
     width: 150px;
     height: 150px;
+
     border-radius: 50%;
     object-fit: cover;
 }
 
 main > section:first-child > div:nth-child(2) h3 {
-    margin: 10px 0 2px;
+    margin-top: 10px;
+
+    color: #ffffff;
     font-size: 18px;
     font-weight: 700;
+    line-height: 27px;
 }
 
 main > section:first-child > div:nth-child(2) p {
-    max-width: 160px;
-    margin: 0 auto;
+    color: #ffffff;
     font-size: 16px;
     font-style: italic;
     line-height: 24px;
