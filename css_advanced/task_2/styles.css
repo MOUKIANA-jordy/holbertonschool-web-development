@@ -1,0 +1,169 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("fonts/SourceSansPro-Bold.ttf");
+    font-weight: 700;
+}
+
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+/* Header and banner background */
+
+body > header,
+main > section:first-child {
+    color: white;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(7, 22, 41, 0),
+            rgba(7, 22, 41, 0.9)
+        ),
+        url("images/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+body > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    padding: 30px max(8%, calc((100% - 1100px) / 2));
+    background-position: center top;
+}
+
+body > header > a img {
+    width: 168px;
+    height: auto;
+    display: block;
+}
+
+body > header nav {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+}
+
+body > header nav a {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body > header nav a:hover {
+    color: #c271ff;
+}
+
+/* Banner */
+
+main > section:first-child {
+    min-height: 1020px;
+    margin-top: -130px;
+    padding-top: 215px;
+    text-align: center;
+    background-position: center top;
+}
+
+/* Main banner title */
+
+main > section:first-child > div:first-child h1 {
+    margin: 0;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+main > section:first-child > div:first-child > p {
+    margin: 10px 0 38px;
+    font-size: 16px;
+    font-weight: 700;
+    word-spacing: 45px;
+}
+
+/* Register button */
+
+main > section:first-child button {
+    min-width: 162px;
+    min-height: 44px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 22px;
+    color: white;
+    background-color: #c271ff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+main > section:first-child button:hover {
+    opacity: 0.9;
+}
+
+/* Learn from the pros */
+
+main > section:first-child > div:nth-child(2) {
+    margin-top: 165px;
+}
+
+main > section:first-child > div:nth-child(2) > h2 {
+    margin: 0 0 85px;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+main > section:first-child > div:nth-child(2) > h2::first-line {
+    color: white;
+}
+
+/* Four professional profiles */
+
+main > section:first-child > div:nth-child(2) > div {
+    display: flex;
+    justify-content: space-between;
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto;
+}
+
+main > section:first-child > div:nth-child(2) > div > div {
+    width: 180px;
+    text-align: center;
+}
+
+main > section:first-child > div:nth-child(2) img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main > section:first-child > div:nth-child(2) h3 {
+    margin: 10px 0 2px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+main > section:first-child > div:nth-child(2) p {
+    max-width: 160px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 24px;
+}
