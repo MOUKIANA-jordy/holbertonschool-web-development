@@ -1,0 +1,398 @@
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("fonts/SourceSansPro-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("fonts/SourceSansPro-Bold.otf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* General */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Header */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: min(1100px, calc(100% - 80px));
+    padding-top: 35px;
+
+    transform: translateX(-50%);
+    background-color: transparent;
+}
+
+header > a {
+    display: inline-block;
+}
+
+header > a img {
+    display: block;
+    width: 168px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+}
+
+header nav a {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #c271ff;
+}
+
+/* Hero section */
+
+main > section:first-child {
+    min-height: 1093px;
+    padding-top: 205px;
+
+    color: #ffffff;
+    text-align: center;
+
+    background-image:
+        radial-gradient(
+            circle at center top,
+            rgba(41, 48, 61, 0.05) 0%,
+            rgba(7, 22, 41, 0.45) 45%,
+            rgba(7, 22, 41, 0.95) 100%
+        ),
+        url("images/School-Page@2x.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+/* Main hero content */
+
+main > section:first-child > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > section:first-child > div:first-child h1 {
+    color: #ffffff;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+
+main > section:first-child > div:first-child p {
+    margin-top: 12px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    word-spacing: 48px;
+}
+
+/* Register button */
+
+main > section:first-child button {
+    width: 162px;
+    height: 44px;
+    margin-top: 38px;
+
+    border: none;
+    border-radius: 22px;
+
+    color: #ffffff;
+    background-color: #c271ff;
+
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+}
+
+main > section:first-child button:hover {
+    opacity: 0.9;
+}
+
+/* Learn from the pros */
+
+main > section:first-child > div:nth-child(2) {
+    margin-top: 168px;
+}
+
+main > section:first-child > div:nth-child(2) > h2 {
+    margin-bottom: 85px;
+
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+main > section:first-child > div:nth-child(2) > h2 span {
+    color: #c271ff;
+    font-weight: 700;
+}
+
+/* Profiles container */
+
+main > section:first-child > div:nth-child(2) > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: min(1000px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+/* Profile cards */
+
+main > section:first-child > div:nth-child(2) > div > div {
+    width: 150px;
+    text-align: center;
+}
+
+main > section:first-child > div:nth-child(2) img {
+    display: block;
+
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main > section:first-child > div:nth-child(2) h3 {
+    margin-top: 10px;
+
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+main > section:first-child > div:nth-child(2) p {
+    margin-top: 2px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 24px;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 900px) {
+    header {
+        width: calc(100% - 40px);
+    }
+
+    header nav {
+        gap: 24px;
+    }
+
+    main > section:first-child > div:first-child h1 {
+        font-size: 72px;
+    }
+
+    main > section:first-child > div:nth-child(2) > div {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main > section:first-child {
+        padding-top: 180px;
+    }
+
+    main > section:first-child > div:first-child h1 {
+        font-size: 48px;
+    }
+
+    main > section:first-child > div:first-child p {
+        word-spacing: 15px;
+    }
+
+    main > section:first-child > div:nth-child(2) {
+        margin-top: 100px;
+    }
+}
+
+/* Quote section */
+
+main > section:nth-child(2) {
+    min-height: 392px;
+    padding: 108px 20px;
+
+    color: #ffffff;
+    background-color: #c271ff;
+}
+
+/* Main quote container */
+
+main > section:nth-child(2) > div {
+    display: flex;
+    align-items: center;
+    gap: 53px;
+
+    width: min(943px, 100%);
+    margin: 0 auto;
+}
+
+/* Quote author image */
+
+main > section:nth-child(2) > div > img {
+    flex-shrink: 0;
+
+    width: 160px;
+    height: 160px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Quote text container */
+
+main > section:nth-child(2) > div > div {
+    flex: 1;
+}
+
+/* Quote */
+
+main > section:nth-child(2) blockquote {
+    margin: 0 0 22px;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+/* Author name */
+
+main > section:nth-child(2) blockquote + p {
+    margin: 0;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 34px;
+}
+
+/* Author occupation */
+
+main > section:nth-child(2) blockquote + p + p {
+    margin: 0;
+
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+/* Responsive quote section */
+
+@media (max-width: 700px) {
+    main > section:nth-child(2) {
+        padding: 70px 30px;
+    }
+
+    main > section:nth-child(2) > div {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+/* Quote section */
+
+main > section:nth-child(2) {
+    min-height: 392px;
+    padding: 108px 20px;
+    color: #ffffff;
+    background-color: #c271ff;
+}
+
+main > section:nth-child(2) > div {
+    display: flex;
+    align-items: center;
+    gap: 53px;
+    width: min(943px, 100%);
+    margin: 0 auto;
+}
+
+main > section:nth-child(2) > div > img {
+    flex-shrink: 0;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main > section:nth-child(2) > div > div {
+    flex: 1;
+}
+
+main > section:nth-child(2) blockquote {
+    margin: 0 0 22px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+main > section:nth-child(2) blockquote + p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 34px;
+}
+
+main > section:nth-child(2) blockquote + p + p {
+    margin: 0;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 34px;
+}
