@@ -6,22 +6,6 @@
     padding: 0;
 }
 
-/* Fonts */
-
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url("fonts/SourceSansPro-Regular.otf");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url("fonts/SourceSansPro-Bold.otf");
-    font-weight: 700;
-    font-style: normal;
-}
-
 /* General */
 
 html {
@@ -29,6 +13,7 @@ html {
 }
 
 body {
+    min-width: 320px;
     font-family: "Source Sans Pro", Arial, sans-serif;
     background-color: #ffffff;
 }
@@ -37,23 +22,19 @@ body {
 
 header {
     position: absolute;
-    top: 0;
+    top: 35px;
     left: 50%;
     z-index: 10;
-
     display: flex;
+    width: calc(100% - 80px);
+    max-width: 1103px;
     align-items: center;
     justify-content: space-between;
-
-    width: min(1100px, calc(100% - 80px));
-    padding-top: 35px;
-
     transform: translateX(-50%);
-    background-color: transparent;
 }
 
 header > a {
-    display: inline-block;
+    display: block;
 }
 
 header > a img {
@@ -75,34 +56,26 @@ header nav a {
     text-decoration: none;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:active {
     color: #c271ff;
 }
 
-/* Hero section */
+/* Banner */
 
 main > section:first-child {
     min-height: 1093px;
     padding-top: 205px;
-
     color: #ffffff;
     text-align: center;
-
-    background-image:
-        radial-gradient(
-            circle at center top,
-            rgba(41, 48, 61, 0.05) 0%,
-            rgba(7, 22, 41, 0.45) 45%,
-            rgba(7, 22, 41, 0.95) 100%
-        ),
-        url("images/School-Page@2x.jpg");
-
+    background-color: #071629;
+    background-image: url("images/School-Page@2x.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
 }
 
-/* Main hero content */
+/* Main banner content */
 
 main > section:first-child > div:first-child {
     display: flex;
@@ -115,12 +88,10 @@ main > section:first-child > div:first-child h1 {
     font-size: 120px;
     font-weight: 700;
     line-height: 1;
-    text-align: center;
 }
 
 main > section:first-child > div:first-child p {
-    margin-top: 12px;
-
+    margin-top: 10px;
     color: #ffffff;
     font-size: 16px;
     font-weight: 700;
@@ -133,22 +104,19 @@ main > section:first-child button {
     width: 162px;
     height: 44px;
     margin-top: 38px;
-
-    border: none;
+    border: 0;
     border-radius: 22px;
-
     color: #ffffff;
     background-color: #c271ff;
-
     font-family: "Source Sans Pro", Arial, sans-serif;
     font-size: 14px;
     font-weight: 600;
-
     cursor: pointer;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-main > section:first-child button:hover {
+main > section:first-child button:hover,
+main > section:first-child button:active {
     opacity: 0.9;
 }
 
@@ -160,10 +128,10 @@ main > section:first-child > div:nth-child(2) {
 
 main > section:first-child > div:nth-child(2) > h2 {
     margin-bottom: 85px;
-
     color: #ffffff;
     font-size: 32px;
     font-weight: 300;
+    line-height: 40px;
 }
 
 main > section:first-child > div:nth-child(2) > h2 span {
@@ -171,18 +139,16 @@ main > section:first-child > div:nth-child(2) > h2 span {
     font-weight: 700;
 }
 
-/* Profiles container */
+/* Profiles */
 
 main > section:first-child > div:nth-child(2) > div {
     display: flex;
+    width: calc(100% - 80px);
+    max-width: 1000px;
+    margin: 0 auto;
     align-items: flex-start;
     justify-content: space-between;
-
-    width: min(1000px, calc(100% - 80px));
-    margin: 0 auto;
 }
-
-/* Profile cards */
 
 main > section:first-child > div:nth-child(2) > div > div {
     width: 150px;
@@ -191,18 +157,15 @@ main > section:first-child > div:nth-child(2) > div > div {
 
 main > section:first-child > div:nth-child(2) img {
     display: block;
-
     width: 150px;
     height: 150px;
     margin: 0 auto;
-
     border-radius: 50%;
     object-fit: cover;
 }
 
 main > section:first-child > div:nth-child(2) h3 {
     margin-top: 10px;
-
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;
@@ -211,14 +174,13 @@ main > section:first-child > div:nth-child(2) h3 {
 
 main > section:first-child > div:nth-child(2) p {
     margin-top: 2px;
-
     color: #ffffff;
     font-size: 16px;
     font-style: italic;
     line-height: 24px;
 }
 
-/* Responsive adjustments */
+/* Tablet */
 
 @media (max-width: 900px) {
     header {
@@ -229,24 +191,37 @@ main > section:first-child > div:nth-child(2) p {
         gap: 24px;
     }
 
+    main > section:first-child {
+        min-height: 1250px;
+    }
+
     main > section:first-child > div:first-child h1 {
         font-size: 72px;
     }
 
     main > section:first-child > div:nth-child(2) > div {
+        max-width: 500px;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 40px 80px;
+        gap: 50px 80px;
     }
 }
 
+/* Mobile */
+
 @media (max-width: 600px) {
     header {
+        top: 25px;
         flex-direction: column;
         gap: 20px;
     }
 
+    header nav {
+        gap: 25px;
+    }
+
     main > section:first-child {
+        min-height: 1650px;
         padding-top: 180px;
     }
 
@@ -259,6 +234,13 @@ main > section:first-child > div:nth-child(2) p {
     }
 
     main > section:first-child > div:nth-child(2) {
-        margin-top: 100px;
+        margin-top: 120px;
+    }
+
+    main > section:first-child > div:nth-child(2) > div {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
     }
 }
