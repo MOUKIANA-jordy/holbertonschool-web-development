@@ -33,7 +33,7 @@ header {
     background-color: transparent;
 }
 
-/* White SmileSchool logo */
+/* SmileSchool logo */
 
 .header-logo {
     width: 167px;
@@ -83,7 +83,7 @@ header nav a:focus {
     color: #c271ff;
 }
 
-/* Hero */
+/* Hero with background image */
 
 .hero {
     position: relative;
@@ -91,31 +91,23 @@ header nav a:focus {
     min-height: 1093px;
     padding-top: 220px;
     overflow: hidden;
-    isolation: isolate;
     color: #ffffff;
     text-align: center;
-    background-image: url("./images/Object.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.hero::before {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    content: "";
-    background:
+    background-image:
         radial-gradient(
             85.9% 85.9% at 50% 14.1%,
             rgba(7, 22, 41, 0) 0%,
             rgba(7, 22, 41, 0.15) 38%,
             rgba(7, 22, 41, 0.7) 75%,
             #071629 100%
-        );
+        ),
+        url("./images/Object.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/* Hero main content */
+/* Hero content */
 
 .hero-content {
     display: flex;
