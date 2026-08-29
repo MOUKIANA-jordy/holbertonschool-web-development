@@ -12,7 +12,7 @@ html {
 
 body {
     min-width: 320px;
-    color: #071629;
+    background-color: #071629;
 }
 
 /* Header */
@@ -24,10 +24,10 @@ header {
     left: 50%;
     width: 100%;
     max-width: 1440px;
-    min-height: 110px;
+    height: 110px;
     padding: 35px 171px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     transform: translateX(-50%);
     background-color: transparent;
@@ -35,7 +35,6 @@ header {
 
 header > a {
     display: block;
-    text-decoration: none;
 }
 
 header > a img {
@@ -45,21 +44,22 @@ header > a img {
     object-fit: contain;
 }
 
-header > div {
+header nav {
     display: flex;
     align-items: center;
     gap: 52px;
+    padding-top: 3px;
 }
 
-header > div a {
+header nav a {
     color: #ffffff;
     font-size: 12px;
     font-weight: 700;
     text-decoration: none;
 }
 
-header > div a:hover,
-header > div a:focus {
+header nav a:hover,
+header nav a:focus {
     color: #c271ff;
 }
 
@@ -67,12 +67,14 @@ header > div a:focus {
 
 .hero {
     position: relative;
+    width: 100%;
     min-height: 1093px;
     padding-top: 220px;
     overflow: hidden;
     isolation: isolate;
     color: #ffffff;
     text-align: center;
+    background-image: url("./images/Object.png");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,26 +89,28 @@ header > div a:focus {
         radial-gradient(
             85.9% 85.9% at 50% 14.1%,
             rgba(7, 22, 41, 0) 0%,
-            rgba(7, 22, 41, 0.18) 40%,
-            rgba(7, 22, 41, 0.72) 75%,
+            rgba(7, 22, 41, 0.15) 38%,
+            rgba(7, 22, 41, 0.7) 75%,
             #071629 100%
         );
 }
 
-.hero > div:first-child {
+/* Main title */
+
+.hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.hero h1 {
+.hero-content h1 {
     color: #ffffff;
     font-size: 120px;
     font-weight: 700;
     line-height: 1;
 }
 
-.hero-text {
+.hero-keywords {
     margin-top: 22px;
     display: flex;
     align-items: center;
@@ -114,13 +118,13 @@ header > div a:focus {
     gap: 58px;
 }
 
-.hero-text p {
+.hero-keywords span {
     color: #ffffff;
     font-size: 16px;
     font-weight: 700;
 }
 
-.register-btn {
+.hero-content button {
     min-width: 162px;
     min-height: 44px;
     margin-top: 38px;
@@ -136,365 +140,66 @@ header > div a:focus {
     cursor: pointer;
 }
 
-.register-btn:hover,
-.register-btn:focus {
+.hero-content button:hover,
+.hero-content button:focus {
     opacity: 0.9;
 }
 
 /* Learn from the pros */
 
-.learn-section {
+.professionals {
     margin-top: 168px;
-    color: #ffffff;
-    text-align: center;
 }
 
-.learn-title {
-    margin-bottom: 87px;
+.professionals h2 {
     color: #ffffff;
     font-size: 32px;
     font-weight: 300;
 }
 
-.learn-title span {
+.professionals h2 span {
     color: #c271ff;
     font-weight: 700;
 }
 
-.pros-container {
+.professionals-list {
     width: calc(100% - 80px);
     max-width: 1009px;
-    margin: 0 auto;
+    margin: 87px auto 0;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 40px;
 }
 
-.pro-card {
+.professionals-list article {
     width: 150px;
     flex-shrink: 0;
-    color: #ffffff;
     text-align: center;
 }
 
-.pro-card img {
+.professionals-list article > img {
     width: 150px;
     height: 150px;
     display: block;
-    margin-bottom: 10px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.pro-card h3 {
-    margin-bottom: 2px;
+.professionals-list h3 {
+    margin-top: 10px;
     color: #ffffff;
     font-size: 18px;
     font-weight: 900;
     line-height: 27px;
 }
 
-.pro-card p {
+.professionals-list p {
+    margin-top: 2px;
     color: #ffffff;
     font-size: 16px;
     font-style: italic;
     line-height: 24px;
-}
-
-/* Quote section */
-
-.quote-section {
-    padding: 100px 0;
-    color: #ffffff;
-    background-color: #c271ff;
-}
-
-.quote-container {
-    width: calc(100% - 40px);
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-
-.quote-container > img {
-    width: 160px;
-    height: 160px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.quote-content {
-    flex: 1;
-}
-
-.quote-text {
-    margin-bottom: 30px;
-    font-size: 22px;
-    line-height: 1.5;
-}
-
-.author-name {
-    margin-bottom: 10px;
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.author-title {
-    font-size: 22px;
-    font-style: italic;
-    opacity: 0.9;
-}
-
-/* Tutorials section */
-
-.tutorials-section {
-    padding: 80px 0;
-    color: #071629;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-.tutorials-section > h1 {
-    margin-bottom: 70px;
-    font-size: 32px;
-    font-weight: 300;
-}
-
-.tutorials-section > h1 span {
-    color: #c271ff;
-    font-weight: 700;
-}
-
-.tutorials-container {
-    width: calc(100% - 40px);
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-}
-
-.tutorial-card {
-    color: #071629;
-    text-align: left;
-}
-
-.tutorial-preview {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.tutorial-preview > img:first-child {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
-
-.play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 64px;
-    height: 64px;
-    transform: translate(-50%, -50%);
-    opacity: 0.8;
-}
-
-.tutorial-card h2 {
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.tutorial-desc {
-    margin-bottom: 16px;
-    color: rgba(7, 22, 41, 0.8);
-    font-size: 14px;
-    line-height: 24px;
-}
-
-.author-info {
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.author-info img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.author-info h3 {
-    color: #c271ff;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.tutorial-stats {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.rating img {
-    height: 15px;
-    display: block;
-}
-
-.duration {
-    color: #c271ff;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* Membership section */
-
-.membership-section {
-    padding: 70px 0;
-    color: #ffffff;
-    text-align: center;
-    background-color: #071629;
-}
-
-.membership-section > h1 {
-    margin-bottom: 50px;
-    font-size: 32px;
-    font-weight: 300;
-}
-
-.membership-section > h1 span {
-    color: #c271ff;
-    font-weight: 700;
-}
-
-.membership-container {
-    width: calc(100% - 40px);
-    max-width: 1200px;
-    margin: 0 auto 70px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
-}
-
-.membership-item {
-    color: #ffffff;
-}
-
-.membership-item img {
-    width: 45px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.membership-item h2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.membership-item p {
-    font-size: 14px;
-    line-height: 26px;
-    opacity: 0.8;
-}
-
-/* FAQ section */
-
-.faq-section {
-    padding: 90px 0;
-    color: #071629;
-    background-color: #ffffff;
-}
-
-.faq-section > h1 {
-    margin-bottom: 70px;
-    color: #071629;
-    font-size: 60px;
-    font-weight: 300;
-    text-align: center;
-}
-
-.faq-container {
-    width: calc(100% - 40px);
-    max-width: 920px;
-    margin: 0 auto;
-}
-
-.faq-row {
-    margin-bottom: 80px;
-    display: flex;
-    gap: 100px;
-}
-
-.faq-row:last-child {
-    margin-bottom: 0;
-}
-
-.faq-item {
-    flex: 1;
-}
-
-.faq-item h2 {
-    margin-bottom: 20px;
-    color: #071629;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.faq-item p {
-    color: rgba(7, 22, 41, 0.8);
-    font-size: 14px;
-    line-height: 24px;
-}
-
-/* Footer */
-
-.footer {
-    padding: 40px 0;
-    color: #ffffff;
-    background-color: #071629;
-}
-
-.footer-container {
-    width: calc(100% - 40px);
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-content {
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-logo {
-    height: 30px;
-    width: auto;
-}
-
-.social-links {
-    display: flex;
-    gap: 20px;
-}
-
-.social-links img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-}
-
-.copyright {
-    color: rgba(255, 255, 255, 0.35);
-    font-size: 12px;
-    text-align: center;
 }
 
 /* Tablet */
@@ -504,20 +209,15 @@ header > div a:focus {
         padding: 35px 40px;
     }
 
-    .hero h1 {
+    .hero-content h1 {
         font-size: 76px;
     }
 
-    .pros-container {
+    .professionals-list {
         max-width: 500px;
         padding-bottom: 60px;
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .tutorials-container,
-    .membership-container {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -525,12 +225,14 @@ header > div a:focus {
 
 @media (max-width: 600px) {
     header {
+        height: auto;
         padding: 25px 20px;
         flex-direction: column;
+        align-items: center;
         gap: 25px;
     }
 
-    header > div {
+    header nav {
         gap: 24px;
     }
 
@@ -539,45 +241,26 @@ header > div a:focus {
         padding-top: 190px;
     }
 
-    .hero h1 {
+    .hero-content h1 {
         font-size: 50px;
     }
 
-    .hero-text {
+    .hero-keywords {
         gap: 18px;
     }
 
-    .hero-text p {
+    .hero-keywords span {
         font-size: 13px;
     }
 
-    .learn-section {
+    .professionals {
         margin-top: 120px;
     }
 
-    .pros-container {
+    .professionals-list {
         width: 100%;
+        margin-top: 60px;
         flex-direction: column;
         align-items: center;
-    }
-
-    .quote-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .tutorials-container,
-    .membership-container {
-        grid-template-columns: 1fr;
-    }
-
-    .faq-row {
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
     }
 }
