@@ -1,30 +1,78 @@
 /* Reset */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
 }
 
 body {
     min-width: 320px;
-    min-height: 100vh;
     color: #071629;
 }
 
-/* Hero background */
+/* Header */
+
+header {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 110px;
+    padding: 35px 171px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateX(-50%);
+    background-color: transparent;
+}
+
+header > a {
+    display: block;
+    text-decoration: none;
+}
+
+header > a img {
+    width: 167px;
+    height: 30px;
+    display: block;
+    object-fit: contain;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+}
+
+header > div a {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header > div a:hover,
+header > div a:focus {
+    color: #c271ff;
+}
+
+/* Hero */
 
 .hero {
     position: relative;
     min-height: 1093px;
+    padding-top: 220px;
     overflow: hidden;
     isolation: isolate;
     color: #ffffff;
-    background-image: url("images/Object.png");
+    text-align: center;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,88 +87,26 @@ body {
         radial-gradient(
             85.9% 85.9% at 50% 14.1%,
             rgba(7, 22, 41, 0) 0%,
-            rgba(7, 22, 41, 0.2) 35%,
-            rgba(7, 22, 41, 0.75) 75%,
+            rgba(7, 22, 41, 0.18) 40%,
+            rgba(7, 22, 41, 0.72) 75%,
             #071629 100%
         );
 }
 
-/* Header */
-
-header {
-    width: 100%;
-    max-width: 1440px;
-    min-height: 110px;
-    margin: 0 auto;
-    padding: 35px 171px;
+.hero > div:first-child {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.logo {
-    width: 37px;
-    height: 30px;
-    display: block;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
-}
-
-.brand-name {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: -1px;
-    white-space: nowrap;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 52px;
-    list-style: none;
-}
-
-nav a {
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-nav a:hover,
-nav a:focus {
-    color: #c271ff;
-}
-
-/* Main banner */
-
-#banner {
-    color: #ffffff;
-    text-align: center;
-}
-
-.banner-content {
-    padding-top: 109px;
-}
-
-.banner-content h1 {
+.hero h1 {
     color: #ffffff;
     font-size: 120px;
     font-weight: 700;
     line-height: 1;
 }
 
-.banner-keywords {
+.hero-text {
     margin-top: 22px;
     display: flex;
     align-items: center;
@@ -128,13 +114,13 @@ nav a:focus {
     gap: 58px;
 }
 
-.banner-keywords span {
+.hero-text p {
     color: #ffffff;
     font-size: 16px;
     font-weight: 700;
 }
 
-button {
+.register-btn {
     min-width: 162px;
     min-height: 44px;
     margin-top: 38px;
@@ -150,92 +136,365 @@ button {
     cursor: pointer;
 }
 
-button:hover,
-button:focus {
+.register-btn:hover,
+.register-btn:focus {
     opacity: 0.9;
 }
 
 /* Learn from the pros */
 
-.professionals {
+.learn-section {
     margin-top: 168px;
+    color: #ffffff;
+    text-align: center;
 }
 
-.professionals h2 {
+.learn-title {
+    margin-bottom: 87px;
     color: #ffffff;
     font-size: 32px;
     font-weight: 300;
 }
 
-.professionals h2 span {
+.learn-title span {
     color: #c271ff;
     font-weight: 700;
 }
 
-.professionals-list {
+.pros-container {
     width: calc(100% - 80px);
     max-width: 1009px;
-    margin: 87px auto 0;
+    margin: 0 auto;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 40px;
 }
 
-.professional-card {
+.pro-card {
     width: 150px;
     flex-shrink: 0;
+    color: #ffffff;
     text-align: center;
 }
 
-.professional-card img {
+.pro-card img {
     width: 150px;
     height: 150px;
     display: block;
+    margin-bottom: 10px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.professional-card h3 {
-    margin-top: 10px;
+.pro-card h3 {
+    margin-bottom: 2px;
     color: #ffffff;
     font-size: 18px;
     font-weight: 900;
     line-height: 27px;
 }
 
-.professional-card p {
-    margin-top: 2px;
+.pro-card p {
     color: #ffffff;
     font-size: 16px;
     font-style: italic;
     line-height: 24px;
 }
 
-/* Sections styled in later tasks */
+/* Quote section */
 
-#quotes,
-#videos,
-#membership,
-#faq,
-footer {
-    padding: 70px 20px;
-    text-align: center;
-}
-
-#quotes {
+.quote-section {
+    padding: 100px 0;
     color: #ffffff;
     background-color: #c271ff;
 }
 
-#membership {
+.quote-container {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.quote-container > img {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quote-content {
+    flex: 1;
+}
+
+.quote-text {
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.author-name {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.author-title {
+    font-size: 22px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Tutorials section */
+
+.tutorials-section {
+    padding: 80px 0;
+    color: #071629;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.tutorials-section > h1 {
+    margin-bottom: 70px;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.tutorials-section > h1 span {
+    color: #c271ff;
+    font-weight: 700;
+}
+
+.tutorials-container {
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.tutorial-card {
+    color: #071629;
+    text-align: left;
+}
+
+.tutorial-preview {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.tutorial-preview > img:first-child {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+}
+
+.tutorial-card h2 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.tutorial-desc {
+    margin-bottom: 16px;
+    color: rgba(7, 22, 41, 0.8);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.author-info {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h3 {
+    color: #c271ff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tutorial-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating img {
+    height: 15px;
+    display: block;
+}
+
+.duration {
+    color: #c271ff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Membership section */
+
+.membership-section {
+    padding: 70px 0;
+    color: #ffffff;
+    text-align: center;
+    background-color: #071629;
+}
+
+.membership-section > h1 {
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.membership-section > h1 span {
+    color: #c271ff;
+    font-weight: 700;
+}
+
+.membership-container {
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+}
+
+.membership-item {
+    color: #ffffff;
+}
+
+.membership-item img {
+    width: 45px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.membership-item h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.membership-item p {
+    font-size: 14px;
+    line-height: 26px;
+    opacity: 0.8;
+}
+
+/* FAQ section */
+
+.faq-section {
+    padding: 90px 0;
+    color: #071629;
+    background-color: #ffffff;
+}
+
+.faq-section > h1 {
+    margin-bottom: 70px;
+    color: #071629;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.faq-container {
+    width: calc(100% - 40px);
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.faq-row {
+    margin-bottom: 80px;
+    display: flex;
+    gap: 100px;
+}
+
+.faq-row:last-child {
+    margin-bottom: 0;
+}
+
+.faq-item {
+    flex: 1;
+}
+
+.faq-item h2 {
+    margin-bottom: 20px;
+    color: #071629;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.faq-item p {
+    color: rgba(7, 22, 41, 0.8);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* Footer */
+
+.footer {
+    padding: 40px 0;
     color: #ffffff;
     background-color: #071629;
 }
 
-footer {
-    color: #ffffff;
-    background-color: #071629;
+.footer-container {
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    height: 30px;
+    width: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 12px;
+    text-align: center;
 }
 
 /* Tablet */
@@ -245,59 +504,80 @@ footer {
         padding: 35px 40px;
     }
 
-    .banner-content h1 {
+    .hero h1 {
         font-size: 76px;
     }
 
-    .professionals-list {
+    .pros-container {
         max-width: 500px;
         padding-bottom: 60px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .tutorials-container,
+    .membership-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Mobile */
 
 @media (max-width: 600px) {
-    .hero {
-        min-height: 1500px;
-    }
-
     header {
-        padding: 30px 20px;
+        padding: 25px 20px;
         flex-direction: column;
         gap: 25px;
     }
 
-    nav ul {
+    header > div {
         gap: 24px;
     }
 
-    .banner-content {
-        padding-top: 70px;
+    .hero {
+        min-height: 1600px;
+        padding-top: 190px;
     }
 
-    .banner-content h1 {
+    .hero h1 {
         font-size: 50px;
     }
 
-    .banner-keywords {
+    .hero-text {
         gap: 18px;
     }
 
-    .banner-keywords span {
+    .hero-text p {
         font-size: 13px;
     }
 
-    .professionals {
+    .learn-section {
         margin-top: 120px;
     }
 
-    .professionals-list {
+    .pros-container {
         width: 100%;
-        margin-top: 60px;
         flex-direction: column;
         align-items: center;
+    }
+
+    .quote-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tutorials-container,
+    .membership-container {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-row {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
     }
 }
