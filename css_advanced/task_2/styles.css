@@ -6,261 +6,298 @@
     padding: 0;
 }
 
-/* General */
-
-html,
-body {
-    width: 100%;
-    min-height: 100%;
+html {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     min-width: 320px;
-    font-family: "Source Sans Pro", Arial, sans-serif;
-    background-color: #ffffff;
+    min-height: 100vh;
+    color: #071629;
+}
+
+/* Hero background */
+
+.hero {
+    position: relative;
+    min-height: 1093px;
+    overflow: hidden;
+    isolation: isolate;
+    color: #ffffff;
+    background-image: url("images/Object.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background:
+        radial-gradient(
+            85.9% 85.9% at 50% 14.1%,
+            rgba(7, 22, 41, 0) 0%,
+            rgba(7, 22, 41, 0.2) 35%,
+            rgba(7, 22, 41, 0.75) 75%,
+            #071629 100%
+        );
 }
 
 /* Header */
 
 header {
-    position: absolute;
-    top: 35px;
-    left: 50%;
-    z-index: 10;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 110px;
+    margin: 0 auto;
+    padding: 35px 171px;
     display: flex;
-    width: calc(100% - 80px);
-    max-width: 1098px;
-    height: 32px;
     align-items: center;
     justify-content: space-between;
-    transform: translateX(-50%);
     background-color: transparent;
 }
 
-header > a {
-    display: block;
-}
-
-header > a img {
-    display: block;
-    width: 168px;
-    height: auto;
-}
-
-header nav {
+.brand {
     display: flex;
-    width: 234px;
     align-items: center;
-    justify-content: space-between;
-}
-
-header nav a {
+    gap: 10px;
     color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 15px;
     text-decoration: none;
 }
 
-header nav a:hover,
-header nav a:active {
+.logo {
+    width: 37px;
+    height: 30px;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+    list-style: none;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
     color: #c271ff;
 }
 
-/* Header and hero section */
+/* Main banner */
 
-main > section:first-child {
-    min-height: 1093px;
-    padding-top: 205px;
+#banner {
     color: #ffffff;
     text-align: center;
-    background-color: #071629;
-    background-image: url("images/School-Page@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
 }
 
-/* Hero title */
-
-main > section:first-child > div:first-child {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.banner-content {
+    padding-top: 109px;
 }
 
-main > section:first-child > div:first-child h1 {
-    height: 150px;
+.banner-content h1 {
     color: #ffffff;
     font-size: 120px;
     font-weight: 700;
-    line-height: 150px;
-    text-align: center;
+    line-height: 1;
 }
 
-/* Keywords */
+.banner-keywords {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 58px;
+}
 
-main > section:first-child > div:first-child p {
-    width: 300px;
+.banner-keywords span {
     color: #ffffff;
     font-size: 16px;
     font-weight: 700;
-    line-height: 20px;
-    text-align: center;
-    word-spacing: 60px;
 }
 
-/* Register button */
-
-main > section:first-child button {
-    display: flex;
-    width: 162px;
-    height: 44px;
+button {
+    min-width: 162px;
+    min-height: 44px;
     margin-top: 38px;
-    border: 0;
-    border-radius: 50px;
+    padding: 13px 20px;
     color: #ffffff;
     background-color: #c271ff;
-    align-items: center;
-    justify-content: center;
-    font-family: "Source Sans Pro", Arial, sans-serif;
+    border: 0;
+    border-radius: 22px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    font-family: inherit;
     font-size: 14px;
     font-weight: 600;
-    line-height: 17.6px;
     cursor: pointer;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-main > section:first-child button:hover,
-main > section:first-child button:active {
+button:hover,
+button:focus {
     opacity: 0.9;
 }
 
 /* Learn from the pros */
 
-main > section:first-child > div:nth-child(2) {
+.professionals {
     margin-top: 168px;
 }
 
-main > section:first-child > div:nth-child(2) > h2 {
-    height: 40px;
-    margin-bottom: 70px;
+.professionals h2 {
     color: #ffffff;
     font-size: 32px;
     font-weight: 300;
-    line-height: 40px;
-    text-align: center;
 }
 
-main > section:first-child > div:nth-child(2) > h2 span {
+.professionals h2 span {
     color: #c271ff;
     font-weight: 700;
 }
 
-/* Profiles container */
-
-main > section:first-child > div:nth-child(2) > div {
-    display: flex;
+.professionals-list {
     width: calc(100% - 80px);
     max-width: 1009px;
-    margin: 0 auto;
+    margin: 87px auto 0;
+    display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 40px;
 }
 
-/* Individual profile */
-
-main > section:first-child > div:nth-child(2) > div > div {
+.professional-card {
     width: 150px;
+    flex-shrink: 0;
     text-align: center;
 }
 
-main > section:first-child > div:nth-child(2) img {
-    display: block;
+.professional-card img {
     width: 150px;
     height: 150px;
-    margin: 0 auto;
+    display: block;
     border-radius: 50%;
     object-fit: cover;
 }
 
-main > section:first-child > div:nth-child(2) h3 {
-    width: 150px;
+.professional-card h3 {
     margin-top: 10px;
     color: #ffffff;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 27px;
-    text-align: center;
 }
 
-main > section:first-child > div:nth-child(2) p {
-    width: 150px;
+.professional-card p {
+    margin-top: 2px;
     color: #ffffff;
     font-size: 16px;
     font-style: italic;
-    font-weight: 400;
     line-height: 24px;
+}
+
+/* Sections styled in later tasks */
+
+#quotes,
+#videos,
+#membership,
+#faq,
+footer {
+    padding: 70px 20px;
     text-align: center;
+}
+
+#quotes {
+    color: #ffffff;
+    background-color: #c271ff;
+}
+
+#membership {
+    color: #ffffff;
+    background-color: #071629;
+}
+
+footer {
+    color: #ffffff;
+    background-color: #071629;
 }
 
 /* Tablet */
 
 @media (max-width: 900px) {
     header {
-        width: calc(100% - 40px);
+        padding: 35px 40px;
     }
 
-    main > section:first-child {
-        min-height: 1250px;
+    .banner-content h1 {
+        font-size: 76px;
     }
 
-    main > section:first-child > div:first-child h1 {
-        height: auto;
-        font-size: 72px;
-        line-height: 90px;
-    }
-
-    main > section:first-child > div:nth-child(2) > div {
+    .professionals-list {
         max-width: 500px;
+        padding-bottom: 60px;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 50px 80px;
     }
 }
 
 /* Mobile */
 
 @media (max-width: 600px) {
+    .hero {
+        min-height: 1500px;
+    }
+
     header {
-        top: 25px;
-        height: auto;
+        padding: 30px 20px;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
 
-    main > section:first-child {
-        min-height: 1650px;
-        padding-top: 180px;
+    nav ul {
+        gap: 24px;
     }
 
-    main > section:first-child > div:first-child h1 {
-        font-size: 48px;
-        line-height: 60px;
+    .banner-content {
+        padding-top: 70px;
     }
 
-    main > section:first-child > div:first-child p {
-        word-spacing: 15px;
+    .banner-content h1 {
+        font-size: 50px;
     }
 
-    main > section:first-child > div:nth-child(2) {
+    .banner-keywords {
+        gap: 18px;
+    }
+
+    .banner-keywords span {
+        font-size: 13px;
+    }
+
+    .professionals {
         margin-top: 120px;
     }
 
-    main > section:first-child > div:nth-child(2) > div {
+    .professionals-list {
         width: 100%;
+        margin-top: 60px;
         flex-direction: column;
         align-items: center;
-        gap: 50px;
     }
 }
