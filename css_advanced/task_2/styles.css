@@ -33,22 +33,42 @@ header {
     background-color: transparent;
 }
 
-header > a {
-    display: block;
+/* White SmileSchool logo */
+
+.header-logo {
+    width: 167px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-header > a img {
-    width: 167px;
+.header-logo img {
+    width: 37px;
     height: 30px;
     display: block;
     object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
+.header-logo span {
+    color: #ffffff;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+/* Navigation */
+
 header nav {
+    padding-top: 3px;
     display: flex;
     align-items: center;
     gap: 52px;
-    padding-top: 3px;
 }
 
 header nav a {
@@ -95,7 +115,7 @@ header nav a:focus {
         );
 }
 
-/* Main title */
+/* Hero main content */
 
 .hero-content {
     display: flex;
