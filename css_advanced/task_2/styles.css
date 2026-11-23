@@ -24,20 +24,22 @@ header {
     left: 0;
     width: 100%;
     z-index: 10;
+}
+
+.header-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding-top: 35px;
+    padding: 35px 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #ffffff;
     font-size: 24px;
     font-weight: 700;
 }
@@ -45,6 +47,7 @@ header {
 .logo img {
     width: 45px;
     height: 36px;
+    object-fit: contain;
 }
 
 nav {
@@ -62,7 +65,7 @@ nav a:hover {
     color: #C271FF;
 }
 
-/* Hero */
+/* Banner */
 
 .banner {
     min-height: 1093px;
@@ -73,7 +76,6 @@ nav a:hover {
             rgba(7, 22, 41, 0.8) 100%
         ),
         url("./images/background.png");
-
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -81,7 +83,7 @@ nav a:hover {
     padding: 190px 20px 90px;
 }
 
-/* Hero content */
+/* Banner Intro */
 
 .banner-intro h1 {
     font-size: 120px;
@@ -114,7 +116,7 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* Professionals */
+/* Learn from the Pros */
 
 .pros {
     margin-top: 160px;
@@ -166,41 +168,73 @@ nav a:hover {
 /* Responsive */
 
 @media (max-width: 768px) {
-    header {
-        width: 100%;
-        padding: 25px 20px;
+    .header-container {
+        padding: 25px 20px 0;
     }
 
     nav {
         gap: 15px;
     }
 
+    nav a {
+        font-size: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 35px;
+        height: auto;
+    }
+
+    .banner {
+        padding-top: 180px;
+    }
+
     .banner-intro h1 {
         font-size: 60px;
+    }
+
+    .banner-tags {
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .pros {
+        margin-top: 100px;
     }
 
     .pros-list {
         flex-wrap: wrap;
         justify-content: center;
     }
+}
 
-    .pros {
-        margin-top: 100px;
+@media (max-width: 480px) {
+    .header-container {
+        gap: 15px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .banner-intro h1 {
+        font-size: 44px;
+    }
+
+    .pros h2 {
+        font-size: 26px;
+    }
+
+    .pro-card {
+        width: 150px;
     }
 }
 
-header {
-    max-width: none;
-    left: 0;
-    transform: none;
-    padding-top: 0;
-}
-
-.header-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-top: 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
