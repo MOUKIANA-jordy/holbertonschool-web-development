@@ -1,3 +1,4 @@
+
 /* General */
 
 * {
@@ -23,20 +24,27 @@ header {
     left: 0;
     width: 100%;
     z-index: 10;
-}
-
-.header-container {
     max-width: 1100px;
     margin: 0 auto;
     padding-top: 35px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.logo img {
-    width: 167px;
-    height: auto;
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header-logo img {
+    width: 45px;
+    height: 36px;
 }
 
 nav {
@@ -54,9 +62,9 @@ nav a:hover {
     color: #C271FF;
 }
 
-/* Banner */
+/* Hero */
 
-.banner {
+.hero {
     min-height: 1093px;
     background-image: url("images/background.png");
     background-size: cover;
@@ -66,15 +74,15 @@ nav a:hover {
     padding: 190px 20px 90px;
 }
 
-/* Banner intro */
+/* Hero content */
 
-.banner-intro h1 {
+.hero-content h1 {
     font-size: 120px;
     font-weight: 700;
     margin: 0;
 }
 
-.banner-tags {
+.hero-keywords {
     display: flex;
     justify-content: center;
     gap: 55px;
@@ -82,7 +90,7 @@ nav a:hover {
     font-weight: 700;
 }
 
-.banner-intro button {
+.hero-content button {
     margin-top: 38px;
     padding: 15px 22px;
     background-color: #C271FF;
@@ -95,28 +103,28 @@ nav a:hover {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-.banner-intro button:hover {
+.hero-content button:hover {
     opacity: 0.9;
 }
 
-/* Learn from the pros */
+/* Professionals */
 
-.pros {
+.professionals {
     margin-top: 160px;
 }
 
-.pros h2 {
+.professionals h2 {
     font-size: 32px;
     font-weight: 300;
     margin-bottom: 85px;
 }
 
-.pros h2 span {
+.professionals h2 span {
     color: #C271FF;
     font-weight: 700;
 }
 
-.pros-list {
+.professionals-list {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -124,24 +132,24 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.pro-card {
+.professionals-list article {
     width: 180px;
     text-align: center;
 }
 
-.pro-card img {
+.professionals-list article img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.pro-card h3 {
+.professionals-list article h3 {
     font-size: 18px;
     margin: 12px 0 5px;
 }
 
-.pro-card p {
+.professionals-list article p {
     font-size: 16px;
     font-style: italic;
     line-height: 1.5;
@@ -151,7 +159,8 @@ nav a:hover {
 /* Responsive */
 
 @media (max-width: 768px) {
-    .header-container {
+    header {
+        width: 100%;
         padding: 25px 20px;
     }
 
@@ -159,16 +168,16 @@ nav a:hover {
         gap: 15px;
     }
 
-    .banner-intro h1 {
+    .hero-content h1 {
         font-size: 60px;
     }
 
-    .pros-list {
+    .professionals-list {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .pros {
+    .professionals {
         margin-top: 100px;
     }
 }
