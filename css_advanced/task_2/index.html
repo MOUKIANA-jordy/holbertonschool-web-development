@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmileSchool</title>
+    <title>SmileSchool - Homepage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <a href="#" class="header-logo">
-            <img src="./images/logo.png" alt="">
-            <span>SmileSchool</span>
-        </a>
 
-        <nav>
-            <a href="#">COURSES</a>
-            <a href="#">PRICING</a>
-            <a href="#">LOGIN</a>
-        </nav>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="SmileSchool logo">
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="#">COURSES</a>
+                <a href="#">PRICING</a>
+                <a href="#">LOGIN</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
+        <!-- Banner -->
+        <section class="banner">
+
+            <div class="banner-intro">
                 <h1>Get schooled</h1>
 
-                <div class="hero-keywords">
+                <div class="banner-tags">
                     <span>SMILES</span>
                     <span>GRIN</span>
                     <span>LAUGH</span>
@@ -37,62 +40,39 @@
                 </button>
             </div>
 
-            <div class="professionals">
-                <h2>
-                    <span>Learn</span> from the pros
-                </h2>
+            <div class="pros">
+                <h2><span>Learn</span> from the pros</h2>
 
-                <div class="professionals-list">
-                    <article>
-                        <img
-                            src="./images/1.png"
-                            alt="Phillip Massey"
-                        >
+                <div class="pros-list">
+                    <div class="pro-card">
+                        <img src="images/profile1.jpg" alt="Phillip Massey">
                         <h3>Phillip Massey</h3>
-                        <p>
-                            « Smile of the year »<br>
-                            2018 - 2019
-                        </p>
-                    </article>
+                        <p>« Smile of the year »<br>2018 - 2019</p>
+                    </div>
 
-                    <article>
-                        <img
-                            src="./images/2.png"
-                            alt="Nannie Lawrence"
-                        >
+                    <div class="pro-card">
+                        <img src="images/profile2.jpg" alt="Nannie Lawrence">
                         <h3>Nannie Lawrence</h3>
-                        <p>
-                            Best « little smile »<br>
-                            2017
-                        </p>
-                    </article>
+                        <p>Best « little smile »<br>2017</p>
+                    </div>
 
-                    <article>
-                        <img
-                            src="./images/3.png"
-                            alt="Bruce Walters"
-                        >
+                    <div class="pro-card">
+                        <img src="images/profile3.jpg" alt="Bruce Walters">
                         <h3>Bruce Walters</h3>
-                        <p>
-                            Best « Friend Smile »<br>
-                            live performance 2019
-                        </p>
-                    </article>
+                        <p>Best « Friend Smile »<br>live performance 2019</p>
+                    </div>
 
-                    <article>
-                        <img
-                            src="./images/4.png"
-                            alt="Henry Hughes"
-                        >
+                    <div class="pro-card">
+                        <img src="images/profile4.jpg" alt="Henry Hughes">
                         <h3>Henry Hughes</h3>
-                        <p>
-                            « 24h smiles » winner<br>
-                            2016 - 2019
-                        </p>
-                    </article>
+                        <p>« 24h smiles » winner<br>2016 - 2019</p>
+                    </div>
                 </div>
             </div>
+
         </section>
     </main>
+
 </body>
 </html>
+
